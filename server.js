@@ -42,6 +42,14 @@ app.get('/about', (req, res)=>{
   });
 });
 
+app.get('/projects', (req, res)=>{
+    //res.send('about page');
+    res.render('projects.hbs', {
+        pageTitle: "project page"
+        //currentYear: new Date().getFullYear()
+    });
+  });
+
 app.get('/bad', (req, res)=>{
     res.send({
         error: 'some error occured'
